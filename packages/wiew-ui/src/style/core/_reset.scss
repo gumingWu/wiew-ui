@@ -1,0 +1,106 @@
+@import '../theme/color';
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-size: $wiewui-font-size;
+  font-family: $font-family;
+  font-variant: $font-variant-base;
+  line-height: $line-height-base;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: button;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+:-ms-input-placeholder {
+  color: $wiewui-placeholder;
+}
+
+::-moz-placeholder {
+  color: $wiewui-placeholder;
+}
+
+::-webkit-input-placeholder {
+  color: $wiewui-placeholder;
+}
+
+//******************滚动条*************************/
+.wiewui-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.wiewui-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.wiewui-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: $wiewui-line;
+}
+
+.wiewui-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: $wiewui-placeholder; // TODO: Color-Question
+}
+
+body > * ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body > * ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body > * ::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: $wiewui-line;
+}
+
+body > * ::-webkit-scrollbar-thumb:hover {
+  background-color: $wiewui-placeholder; // TODO: Color-Question
+}
+
+body > * ::-webkit-scrollbar-corner {
+  background-color: transparent;
+}

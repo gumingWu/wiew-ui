@@ -1,0 +1,21 @@
+// 字号大小变量
+
+$wiewui-font-size: var(--wiewui-font-size, 12px); //正文、卡片副标题
+$wiewui-font-size-card-title: var(--wiewui-font-size-card-title, 14px); //卡片标题
+$wiewui-font-size-page-title: var(--wiewui-font-size-page-title, 16px); //页面标题
+$wiewui-font-size-modal-title: var(--wiewui-font-size-modal-title, 18px); //弹窗标题、数字
+$wiewui-font-size-price: var(--wiewui-font-size-price, 20px); //购买价格
+$wiewui-font-size-data-overview: var(--wiewui-font-size-data-overview, 24px); //数据总览
+
+$wiewui-font-size-icon: var(--wiewui-font-size-icon, 16px);     //图标大小
+$wiewui-font-size-sm: var(--wiewui-font-size-sm, 12px);  //当组件size为'sm'时使用此字号大小
+$wiewui-font-size-md: var(--wiewui-font-size-md, 12px);  //当组件size为''时使用此字号大小
+$wiewui-font-size-lg: var(--wiewui-font-size-lg, 14px);  //当组件size为'lg'时使用此字号大小
+
+$wiewui-font-title-weight: bold; //标题文字粗细
+$wiewui-font-content-weight: normal; //内容文字粗细
+$wiewui-line-height-base: 1.5; //规范行高
+
+$font-title-weight: bold;
+$font-content-weight: normal;
+$line-height-base: 1.5;

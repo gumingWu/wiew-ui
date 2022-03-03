@@ -1,0 +1,12 @@
+// 临时层
+// 若存在遮罩，则遮罩基于对应z-index值-1
+$wiewui-z-index-full-page-overlay: var(--wiewui-z-index-full-page-overlay, 1080); // 全屏覆盖类元素
+$wiewui-z-index-dropdown: var(--wiewui-z-index-dropdown, 1052); // 下拉菜单，dropdown等
+$wiewui-z-index-pop-up: var(--wiewui-z-index-pop-up, 1060); // 提示类信息，popover，tooltip等
+$wiewui-z-index-modal: var(--wiewui-z-index-modal, 1050);// 弹窗,
+$wiewui-z-index-drawer: var(--wiewui-z-index-drawer, 1040);// 抽屉板
+$wiewui-z-index-framework: var(--wiewui-z-index-framework, 1000);// 框架类元素，header,sideMenu等
+
+// 内容层，根据需要设置，zIndex需小于临时层
+
+// 背景层，根据需要设置，zIndex需小于内容层

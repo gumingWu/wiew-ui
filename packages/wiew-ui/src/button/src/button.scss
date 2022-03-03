@@ -1,0 +1,422 @@
+@import '../../style/mixins/index';
+@import '../../style/theme/color';
+@import '../../style/theme/variables';
+@import '../../style/theme/font';
+@import '../../style/theme/corner';
+
+$wiewui-btn-loading-color: $wiewui-text;
+$wiewui-btn-xs-padding: 1px 5px;
+$wiewui-btn-xs-height: 24px;
+$wiewui-btn-icon-xs-min-width: 24px;
+$wiewui-btn-xs-min-width: 48px;
+$wiewui-btn-sm-padding: 1px 15px;
+$wiewui-btn-sm-min-width: 56px;
+$wiewui-btn-icon-sm-min-width: 24px;
+$wiewui-btn-sm-height: 24px;
+$wiewui-btn-min-width: 64px;
+$wiewui-btn-height: 28px;
+$wiewui-btn-padding: 3px 20px;
+$wiewui-btn-lg-padding: 5px 23px;
+$wiewui-btn-lg-min-width: 72px;
+$wiewui-btn-icon-lg-min-width: 32px;
+$wiewui-btn-lg-height: 32px;
+$wiewui-btn-xs-font-size: $wiewui-font-size-sm;
+$wiewui-btn-sm-font-size: $wiewui-font-size-sm;
+$wiewui-btn-font-size: $wiewui-font-size-md;
+$wiewui-btn-lg-font-size: $wiewui-font-size-lg;
+$wiewui-btn-line-height: $wiewui-line-height-base;
+
+$wiewui-btn-normal-config: (
+  text: (
+    color: $wiewui-brand-active,
+    padding: 0
+  ),
+  text-dark: (
+    color: $wiewui-brand-active,
+    padding: 0
+  ),
+  common: (
+    color: $wiewui-text,
+    min-width: $wiewui-btn-min-width,
+    background-color: $wiewui-block,
+    border-color: $wiewui-line
+  ),
+  stress: (
+    color: $wiewui-light-text,
+    min-width: $wiewui-btn-min-width,
+    background-color: $wiewui-primary
+  ),
+  primary: (
+    color: $wiewui-light-text,
+    min-width: $wiewui-btn-min-width,
+    background-color: $wiewui-primary
+  ),
+  danger: (
+    color: $wiewui-light-text,
+    min-width: $wiewui-btn-min-width,
+    background-color: $wiewui-contrast
+  ),
+  success: (
+    color: $wiewui-dark-text,
+    min-width: $wiewui-btn-min-width,
+    background-color: $wiewui-success
+  ),
+  warning: (
+    color: $wiewui-dark-text,
+    min-width: $wiewui-btn-min-width,
+    background-color: $wiewui-warning
+  ),
+  xs: (
+    padding: $wiewui-btn-xs-padding,
+    height: $wiewui-btn-xs-height,
+    font-size: $wiewui-btn-xs-font-size,
+    min-width: $wiewui-btn-xs-min-width
+  ),
+  sm: (
+    padding: $wiewui-btn-sm-padding,
+    height: $wiewui-btn-sm-height,
+    font-size: $wiewui-btn-sm-font-size,
+    min-width: $wiewui-btn-sm-min-width,
+  ),
+  lg: (
+    padding: $wiewui-btn-lg-padding,
+    height: $wiewui-btn-lg-height,
+    font-size: $wiewui-btn-lg-font-size,
+    min-width: $wiewui-btn-lg-min-width,
+  ),
+  left: (
+    border-radius: $wiewui-border-radius 0 0 $wiewui-border-radius,
+  ),
+  right: (
+    border-radius: 0 $wiewui-border-radius $wiewui-border-radius 0,
+  ),
+  default: (
+    border-radius: $wiewui-border-radius,
+  )
+);
+
+$wiewui-btn-pseudo-config: (
+  text: (
+    hover: (
+      background-color: transparent,
+      color: $wiewui-brand-active-focus
+    ),
+    focus: (
+      background-color: transparent,
+      color: $wiewui-brand-active-focus
+    ),
+    active: (
+      background-color: transparent,
+      color: $wiewui-brand-active-focus
+    )
+  ),
+  text-dark: (
+    hover: (
+      background-color: transparent,
+      color: $wiewui-brand-active-focus
+    ),
+    focus: (
+      background-color: transparent,
+      color: $wiewui-brand-active-focus
+    ),
+    active: (
+      background-color: transparent,
+      color: $wiewui-brand-active-focus
+    )
+  ),
+  common: (
+    hover: (
+      border-color: $wiewui-form-control-line-active,
+      color: $wiewui-brand-active
+    ),
+    focus: (
+      border-color: $wiewui-form-control-line-active,
+      color: $wiewui-brand-active
+    ),
+    active: (
+      border-color: $wiewui-form-control-line-active,
+      color: $wiewui-brand-active
+    )
+  ),
+  stress: (
+    hover: (
+      background-color: $wiewui-primary-hover
+    ),
+    focus: (
+      background-color: $wiewui-primary-hover
+    ),
+    active: (
+      background-color: $wiewui-primary-active
+    )
+  ),
+  primary: (
+    hover: (
+      background-color: $wiewui-primary-hover
+    ),
+    focus: (
+      background-color: $wiewui-primary-hover
+    ),
+    active: (
+      background-color: $wiewui-primary-active
+    )
+  ),
+  danger: (
+    hover: (
+      background-color: $wiewui-contrast-hover
+    ),
+    focus: (
+      background-color: $wiewui-contrast-hover
+    ),
+    active: (
+      background-color: $wiewui-contrast-active
+    )
+  ),
+  success: (
+    hover: (
+      background-color: $wiewui-success-hover
+    ),
+    focus: (
+      background-color: $wiewui-success-hover
+    ),
+    active: (
+      background-color: $wiewui-success-active
+    )
+  ),
+  warning: (
+    hover: (
+      background-color: $wiewui-warning-hover
+    ),
+    focus: (
+      background-color: $wiewui-warning-hover
+    ),
+    active: (
+      background-color: $wiewui-warning-active
+    )
+  )
+);
+
+.wiewui-btn {
+  padding: $wiewui-btn-padding;
+  font-size: $wiewui-btn-font-size;
+  height: $wiewui-btn-height;
+  line-height: $wiewui-btn-line-height;
+  border-radius: $wiewui-border-radius;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: transparent;
+  @each $type in text, text-dark, common, stress, primary, danger, success, warning, left, right, xs, sm, lg {
+    &.wiewui-btn-#{$type} {
+      @each $key, $value in map-get($wiewui-btn-normal-config, $type) {
+        #{$key}: $value;
+      }
+    }
+  }
+  @each $type in text, text-dark, common, stress, primary, danger, success, warning, {
+    &.wiewui-btn-#{$type} {
+      @each $pseudo, $value in map-get($wiewui-btn-pseudo-config, $type) {
+        &:#{$pseudo} {
+          @each $key, $value2 in map-get(map-get($wiewui-btn-pseudo-config, $type), $pseudo) {
+            #{$key}: $value2;
+          }
+        }
+      }
+    }
+  }
+
+  &.wiewui-btn-common {
+    &:disabled {
+      color: $wiewui-disabled-text;
+      background: $wiewui-disabled-bg;
+      border: 1px solid $wiewui-disabled-line;
+    }
+  }
+
+  &.wiewui-btn-primary {
+    &:disabled {
+      color: $wiewui-light-text;
+      background: $wiewui-primary-disabled;
+      border: none;
+    }
+  }
+
+  &.wiewui-btn-danger {
+    &:disabled {
+      color: $wiewui-disabled-text;
+      background: $wiewui-disabled-bg;
+      border: 1px solid $wiewui-disabled-line;
+    }
+  }
+
+  &.wiewui-btn-text-dark {
+    &:disabled {
+      color: $wiewui-disabled-text;
+    }
+  }
+
+  &.wiewui-btn-text {
+    &:disabled {
+      color: $wiewui-disabled-text;
+    }
+  }
+
+  &.bordered {
+    &.wiewui-btn-common {
+      color: $wiewui-text;
+      border-color: transparent;
+
+      &:hover,
+      &:focus {
+        border-color: $wiewui-primary-hover;
+      }
+
+      &:active {
+        border-color: $wiewui-primary-active;
+      }
+    }
+
+    &.wiewui-btn-stress,
+    &.wiewui-btn-primary {
+      border-color: $wiewui-brand;
+      color: $wiewui-brand;
+      background-color: $wiewui-block;
+    }
+
+    &.wiewui-btn-success {
+      border-color: $wiewui-success;
+      color: $wiewui-success;
+      background-color: $wiewui-block;
+    }
+
+    &.wiewui-btn-warning {
+      border-color: $wiewui-warning;
+      color: $wiewui-warning;
+      background-color: $wiewui-block;
+    }
+
+    &.wiewui-btn-danger {
+      border-color: $wiewui-danger;
+      color: $wiewui-danger;
+      background-color: $wiewui-block;
+    }
+  }
+
+  &.d-btn-icon {
+    &:hover,
+    &:focus {
+      border: 1px solid $wiewui-list-item-hover-bg;
+      background-color: $wiewui-list-item-hover-bg;
+    }
+
+    &:disabled {
+      background-color: $wiewui-disabled-bg;
+    }
+  }
+
+  &:not(:disabled) {
+    &.wiewui-btn-text,
+    &.wiewui-btn-text-dark {
+      &.d-btn-icon-wrap {
+        color: $wiewui-text;
+
+        .wiewui-icon-fix {
+          color: $wiewui-text-weak;
+        }
+
+        &:hover {
+          color: $wiewui-list-item-hover-text;
+
+          .wiewui-icon-fix {
+            color: $wiewui-icon-fill-active;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wiewui-loading {
+  .wiewui-loading-default-spinner {
+    div {
+      background-color: $wiewui-text;
+    }
+  }
+}
+
+.wiewui-btn-host {
+  display: inline-block;
+}
+
+.wiewui-btn {
+  transition: background-color 0.2s;
+  border-style: solid;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:disabled,
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &.d-btn-icon {
+    padding: 7px 8px;
+    line-height: 1em;
+    border: 1px solid transparent;
+
+    &.wiewui-btn-xs,
+    &.wiewui-btn-sm {
+      padding: 5px;
+    }
+
+    &.wiewui-btn-xs {
+      min-width: $wiewui-btn-icon-xs-min-width;
+    }
+
+    &.wiewui-btn-sm {
+      min-width: $wiewui-btn-icon-sm-min-width;
+    }
+
+    &.wiewui-btn-lg {
+      .icon {
+        font-size: $wiewui-font-size-icon;
+      }
+
+      min-width: $wiewui-btn-icon-lg-min-width;
+    }
+  }
+
+  &:not(.d-btn-icon) {
+    .icon-fix {
+      font-size: $wiewui-font-size-icon;
+    }
+  }
+}
+
+.wiewui-icon-fix {
+  position: relative;
+  font-size: $wiewui-font-size;
+}
+
+.wiewui-btn.wiewui-btn-common:not(:disabled) {
+  .wiewui-icon-fix {
+    color: $wiewui-text-weak;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    .wiewui-icon-fix {
+      color: $wiewui-icon-fill-active;
+    }
+  }
+}
+
+.button-content {
+  display: inline-block;
+  position: relative;
+}
+
+.clear-right-5 {
+  margin-right: 5px;
+}

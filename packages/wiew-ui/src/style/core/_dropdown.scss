@@ -1,0 +1,219 @@
+@import '../theme/color.scss';
+
+.wiewui-dropdown {
+  position: relative;
+  vertical-align: middle;
+
+  .wiewui-dropdown-toggle {
+    box-shadow: none;
+    outline: none;
+  }
+
+  .wiewui-dropdown-toggle.wiewui-dropdown-default {
+    line-height: 1.5;
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    align-items: center;
+
+    &:not(.wiewui-dropdown-item) {
+      display: inline-flex !important;
+    }
+  }
+
+  .wiewui-caret {
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+
+  &.wiewui-dropdown-open .wiewui-dropdown-toggle span.icon-chevron-down {
+    transform: rotate(180deg);
+  }
+}
+
+.wiewui-dropdown-menu {
+  position: absolute;
+  float: left;
+  top: calc(100% - 1px);
+  left: 0;
+  z-index: 1000;
+  min-width: calc(min(100%, 102px));
+  margin: 4px 0;
+  padding-bottom: 5px;
+  background-clip: padding-box;
+  border-radius: 2px;
+  list-style: none;
+  background-color: $wiewui-connected-overlay-bg;
+  box-shadow: 0 2px 5px 0 $wiewui-shadow;
+  outline: none;
+
+  &.wiewui-dropdown-overlay,
+  &.wiewui-dropdown-overlay.popper-container {
+    border: 1px solid $wiewui-brand;
+  }
+
+  &.wiewui-dropdown-overlay.popper-container {
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+
+  // .open > & {
+  //   display: block;
+  // }
+  > li {
+    position: relative;
+
+    > a {
+      height: 36px;
+      padding: 0 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  li > input {
+    margin: 0 10px;
+  }
+
+  > .disabled > a {
+    color: $wiewui-disabled-text;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      cursor: not-allowed;
+    }
+  }
+
+  .wiewui-dropdown-item:not(.disabled) {
+    &:hover:not(:active) {
+      background-color: $wiewui-list-item-hover-bg;
+      color: $wiewui-list-item-hover-text;
+    }
+
+    &:active:hover {
+      background-color: $wiewui-list-item-active-bg;
+      color: $wiewui-list-item-active-text;
+    }
+
+    &.wiewui-dropdown-bg {
+      //箭头选中
+      background-color: $wiewui-list-item-hover-bg;
+      color: $wiewui-list-item-hover-text;
+    }
+
+    &.active {
+      color: $wiewui-list-item-active-text;
+      background-color: $wiewui-list-item-active-bg;
+    }
+  }
+}
+
+.wiewui-form-group.wiewui-has-feedback {
+  & > .wiewui-form-control-feedback {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    pointer-events: none;
+
+    &:hover {
+      position: absolute;
+    }
+
+    .wiewui-caret {
+      display: inline-block;
+      margin-left: 2px;
+      vertical-align: middle;
+      border-top: 4px solid;
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent;
+    }
+  }
+}
+
+.form-group.has-feedback[tabindex] {
+  outline: 0;
+}
+
+.wiewui-dropdown-no-border {
+  min-height: 28px;
+  min-width: calc(min(100%, 102px));
+  line-height: 1.5;
+  padding: 4px 10px;
+  border-radius: 2px;
+  text-align: center;
+  outline: 0;
+  background-image: none;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: $wiewui-connected-overlay-bg;
+  color: $wiewui-text;
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+  border: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active:hover,
+  &:focus {
+    color: $wiewui-brand-active;
+  }
+}
+
+.wiewui-dropdown {
+  .wiewui-dropdown-default {
+    background-color: $wiewui-base-bg;
+    color: $wiewui-text;
+    border-color: $wiewui-form-control-line;
+
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: $wiewui-form-control-line-hover;
+    }
+  }
+
+  .wiewui-dropdown-menu {
+    background: $wiewui-connected-overlay-bg;
+    box-shadow: 0 2px 5px 0 $wiewui-shadow;
+
+    > li > a:not(.disabled) {
+      color: $wiewui-text;
+
+      &:hover,
+      &:focus {
+        background-color: $wiewui-list-item-hover-bg;
+      }
+    }
+
+    > .disabled > a {
+      color: $wiewui-disabled-text;
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+}

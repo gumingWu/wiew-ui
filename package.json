@@ -1,0 +1,14 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "docs": "cd packages/wiew-docs && yarn docs:dev",
+    "lerna:docs": "lerna exec --scope wiew-docs yarn docs:dev"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
