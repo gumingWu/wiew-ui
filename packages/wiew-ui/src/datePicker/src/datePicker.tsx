@@ -7,7 +7,7 @@ export default defineComponent({
   setup(props, { attrs, slots, emit, expose }) {
     return () => {
       return (
-        <div></div>
+        <div>我是datePicker</div>
       )
     }
   }

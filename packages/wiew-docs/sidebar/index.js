@@ -33,6 +33,10 @@ export default {
           text: "DatePicker 日期选择器",
           link: "/components/datePicker/",
         },
+        {
+          text: "PhotoView 图片预览",
+          link: "/components/photoView/",
+        },
       ],
     },
   ],

@@ -1,10 +1,10 @@
-# DatePicker 日期选择器
+# PhotoView 图片预览
 
 :::demo 基本使用
 
 ```vue
 <template>
-  <w-date-picker></w-date-picker>
+  <w-photo-view></w-photo-view>
 </template>
 ```
 
