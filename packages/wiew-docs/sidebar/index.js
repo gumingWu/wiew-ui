@@ -27,6 +27,15 @@ export default {
       ],
     },
     {
+      text: "功能组件",
+      children: [
+        {
+          text: "二维码",
+          link: "/components/qrcode/",
+        },
+      ],
+    },
+    {
       text: "进阶组件",
       children: [
         {

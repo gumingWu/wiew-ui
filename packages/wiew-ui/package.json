@@ -35,6 +35,10 @@
     "vue-tsc": "^0.32.1"
   },
   "dependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "@types/qrcode": "^1.4.2",
+    "lodash-es": "^4.17.21",
+    "qrcode": "^1.5.0",
     "sass": "^1.49.9",
     "wiew-tools": "^0.0.1"
   }
