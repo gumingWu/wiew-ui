@@ -15,6 +15,8 @@ export const renderQrcode = async ({
   options,
 }: RenderQrcodeType) => {
   const params: QRCodeRenderersOptions = cloneDeep(options);
+  console.log(params);
+
   // 容错率，默认对内容少的二维码采用高容错率，内容多的二维码采用低容错率
   params.errorCorrectionLevel =
     params.errorCorrectionLevel || getErrorCorrectionLevel(content);

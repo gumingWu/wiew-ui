@@ -6080,7 +6080,7 @@ vite@^2.4.4, vite@^2.6.14, vite@^2.6.5:
 
 vitepress-theme-demoblock@^1.4.2:
   version "1.4.2"
-  resolved "https://registry.npmmirror.com/vitepress-theme-demoblock/download/vitepress-theme-demoblock-1.4.2.tgz#0b55695e53d3cd142d5351f93f62d651ed057df1"
+  resolved "https://registry.npmmirror.com/vitepress-theme-demoblock/-/vitepress-theme-demoblock-1.4.2.tgz#0b55695e53d3cd142d5351f93f62d651ed057df1"
   integrity sha512-OMIRg1JJI8NvBVLFu2G0cd+gT5IzXZfTsV7yws7GfRXZE3Q4qLO5cR1+ngNnFZw44ID1oLk+Yu9HZM+AJYtgWA==
   dependencies:
     camelcase "^6.2.0"
