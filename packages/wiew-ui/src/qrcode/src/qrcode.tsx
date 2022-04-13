@@ -16,7 +16,6 @@ export default defineComponent({
 
       const { value, options, width, logo } = props
       const renderValue = String(value)
-      console.log(renderValue);
 
       const url = await useHookToCreateQrcode({
         canvas: wrapEl,

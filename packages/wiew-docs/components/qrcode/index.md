@@ -18,11 +18,11 @@
 
 二维码组件基于`qrcode`库搭建，可通过`options`选项对二维码进行修改
 
-<!-- :::demo 通过 options 修改
+:::demo 通过 options 修改
 
 ```vue
 <template>
-  <w-qrcode :options="options"></w-qrcode>
+  <w-qrcode value="xxx" :options="options"></w-qrcode>
 </template>
 
 <script setup lang="ts">
@@ -30,10 +30,10 @@ import { ref } from "vue";
 
 const options = ref({
   color: {
-    dark: "#00ff00",
+    dark: "#4400ff",
   },
 });
 </script>
 ```
 
-::: -->
+:::
