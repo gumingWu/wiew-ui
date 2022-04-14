@@ -1,4 +1,4 @@
-import { defineComponent, ref, onMounted, unref } from 'vue'
+import { defineComponent, ref, onMounted, unref, watch } from 'vue'
 import props from './props'
 import type { QRcodePropType } from './types'
 import { useHookToCreateQrcode } from './hooks/useRenderQrcode'
@@ -28,6 +28,14 @@ export default defineComponent({
     }
 
     onMounted(createQrcode)
+
+    watch(
+      () => props,
+      createQrcode,
+      {
+        deep: true
+      }
+    )
 
     return () => (
       <canvas ref={wrapRef} />
