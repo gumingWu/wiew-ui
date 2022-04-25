@@ -33,6 +33,10 @@ export default {
           text: "二维码",
           link: "/components/qrcode/",
         },
+        {
+          text: "定制右键",
+          link: "/components/rightClick/",
+        },
       ],
     },
     {
