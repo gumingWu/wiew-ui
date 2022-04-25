@@ -50,6 +50,10 @@ export default {
           text: "PhotoView 图片预览",
           link: "/components/photoView/",
         },
+        {
+          text: "VirtualScroll 虚拟滚动",
+          link: "/components/virtualScroll/",
+        },
       ],
     },
   ],

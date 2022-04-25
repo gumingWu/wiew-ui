@@ -4,7 +4,7 @@ heroImage: /cat.png
 actionText: 快速开始
 actionLink: /components/introduction/main
 
-features: 
+features:
   - title: 最新技术栈
     details: 基于Vue3+JSX+Vite+Vitepress+Lerna+Cli,实现组件库和文档和脚手架
   - title: 轻量快速热重载

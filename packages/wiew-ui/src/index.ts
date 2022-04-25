@@ -5,6 +5,7 @@ import Input from "./input";
 import PhotoView from "./phtotView";
 import QRcode from "./qrcode";
 import RightClick from "./rightClick";
+import VirtualScroll from "./virtualScroll";
 
 const installModule = [
   Button,
@@ -13,6 +14,7 @@ const installModule = [
   PhotoView,
   QRcode,
   RightClick,
+  VirtualScroll,
 ];
 
 export default {
