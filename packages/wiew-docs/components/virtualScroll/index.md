@@ -8,7 +8,7 @@
 <template>
   <w-virtual-scroll :items="list" :item-height="30" :height="300" :width="300">
     <template #default="{ item }">
-      <div>{{ item }}</div>
+      <div class="demo-item">{{ item.title }}</div>
     </template>
   </w-virtual-scroll>
 </template>
@@ -21,6 +21,15 @@ for (let i = 0; i < 1000; i++) {
   });
 }
 </script>
+
+<style>
+.demo-item {
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+}
+</style>
 ```
 
 :::
