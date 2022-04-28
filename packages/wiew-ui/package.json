@@ -1,17 +1,24 @@
 {
   "name": "wiew-ui",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
-  "author": "gumingWu <15626185054@163.com>",
+  "author": "gaaming",
   "license": "ISC",
-  "main": "lib/index.js",
+  "main": "./dist/wiew-ui.umd.js",
+  "module": "./dist/wiew-ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/wiew-ui.es.js",
+      "require": "./dist/wiew-ui.umd.js"
+    }
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "registry": "https://registry.npm.taobao.org/"
@@ -22,7 +29,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build:all": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
@@ -40,7 +48,6 @@
     "@vueuse/core": "^8.3.1",
     "lodash-es": "^4.17.21",
     "qrcode": "^1.5.0",
-    "sass": "^1.49.9",
-    "wiew-tools": "^0.0.1"
+    "sass": "^1.49.9"
   }
 }
