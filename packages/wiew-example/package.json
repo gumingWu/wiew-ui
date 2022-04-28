@@ -1,0 +1,38 @@
+{
+  "name": "wiew-example",
+  "version": "1.0.0",
+  "description": "examples",
+  "author": "gumingWu <15626185054@163.com>",
+  "homepage": "https://github.com/gumingWu/wiew-ui#readme",
+  "license": "ISC",
+  "main": "lib/wiew-example.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gumingWu/wiew-ui.git"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --report"
+  },
+  "bugs": {
+    "url": "https://github.com/gumingWu/wiew-ui/issues"
+  },
+  "dependencies": {
+    "vue": "^3.2.33",
+    "wiew-ui": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli": "^5.0.4",
+    "@vue/cli-service": "^5.0.4"
+  }
+}
