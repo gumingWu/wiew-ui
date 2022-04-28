@@ -1,6 +1,6 @@
 {
   "name": "wiew-ui",
-  "private": true,
+  "version": "1.0.0",
   "devDependencies": {},
   "scripts": {
     "docs:dev": "pnpm docs:dev --filter @wiew/docs",
