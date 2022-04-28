@@ -1,12 +1,10 @@
 {
   "name": "root",
   "private": true,
-  "devDependencies": {
-    "lerna": "^4.0.0"
-  },
+  "devDependencies": {},
   "scripts": {
-    "docs": "cd packages/wiew-docs && yarn docs:dev",
-    "lerna:docs": "lerna exec --scope wiew-docs yarn docs:dev"
+    "docs:dev": "pnpm docs:dev --filter @wiew/docs",
+    "example": "pnpm serve --filter @wiew/example"
   },
   "workspaces": [
     "packages/*"

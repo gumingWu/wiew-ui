@@ -1,5 +1,5 @@
 {
-  "name": "wiew-example",
+  "name": "@wiew/example",
   "version": "1.0.0",
   "description": "examples",
   "author": "gumingWu <15626185054@163.com>",
@@ -28,8 +28,9 @@
     "url": "https://github.com/gumingWu/wiew-ui/issues"
   },
   "dependencies": {
-    "vue": "^3.2.33",
-    "wiew-ui": "^1.0.0"
+    "@babel/core": "^7.0.0",
+    "@wiew/ui": "workspace:^1.0.0",
+    "vue": "^3.2.33"
   },
   "devDependencies": {
     "@vue/cli": "^5.0.4",
