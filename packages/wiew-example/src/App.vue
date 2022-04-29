@@ -11,6 +11,9 @@ for (let i = 0; i < 1000; i++) {
 <template>
   <div>{{ msg }}</div>
   <w-button>hhh</w-button>
+  <w-input></w-input>
+  <w-date-picker></w-date-picker>
+  <w-photo-view></w-photo-view>
   <!-- <w-input></w-input>
   <div>
     <w-virtual-scroll

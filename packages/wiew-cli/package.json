@@ -11,7 +11,7 @@
     "test": "__tests__"
   },
   "bin": {
-    "create-component": "src/index.js"
+    "wiew-cli": "dist/index.js"
   },
   "files": [
     "src/index.ts"
@@ -24,11 +24,14 @@
     "url": "git@gitee.com:gaaming/wiew-ui.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "tsup src/index.ts --clean"
   },
   "dependencies": {
     "cac": "^6.7.12",
     "kolorist": "^1.5.1",
     "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "tsup": "^5.12.6"
   }
 }

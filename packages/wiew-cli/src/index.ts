@@ -1,33 +1,22 @@
-#! /usr/bin/env node
-const prompts = require("prompts");
-import { bgRed, reset } from "kolorist";
+import { cac } from "cac";
+import path from "path";
 
-async function init() {
-  let result: Record<string, any> = {};
+const cli = cac();
 
-  try {
-    result = await prompts(
-      [
-        {
-          type: "text",
-          name: "componentName",
-          message: reset("Component Name:"),
-        },
-      ],
-      {
-        onCancel: () => {
-          throw new Error(bgRed("Operation Cancelled"));
-        },
-      }
-    );
-  } catch (err) {
-    console.log(bgRed(err));
-    return;
-  }
+cli
+  .command("component")
+  .option("component", "Create Component")
+  .action((dir, options) => {
+    console.log(dir, options);
+  });
 
-  console.log(result);
-}
+cli
+  .command("project")
+  .option("project", "Create Project")
+  .action((dir, options) => {
+    console.log(dir, options);
+  });
 
-init().catch((err) => {
-  console.log(bgRed(err));
-});
+cli.help();
+cli.version = require(path.resolve(__dirname, "../package.json")).version;
+cli.parse();
