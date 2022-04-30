@@ -1,5 +1,6 @@
 import { cac } from "cac";
 import path from "path";
+import createComponent from "./commander/createComponent";
 
 const cli = cac();
 
@@ -25,15 +26,14 @@ const cli = cac();
 cli
   .command("component")
   .option("--name [name]", "Component Name")
-  .action((options) => {
-    console.log(options);
-  });
+  .option("--chinese [chinese]", "Component Chinese Name(docs used)")
+  .action(createComponent);
 
 cli
   .command("project")
   .option("project", "Create Project")
-  .action((dir, options) => {
-    console.log(dir, options);
+  .action((options) => {
+    console.log(options);
   });
 
 cli.help();
