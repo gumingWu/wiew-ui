@@ -37,6 +37,10 @@ export default {
           text: "定制右键",
           link: "/components/rightClick/",
         },
+        {
+          text: "动效数字",
+          link: "/components/digitalNum/",
+        },
       ],
     },
     {

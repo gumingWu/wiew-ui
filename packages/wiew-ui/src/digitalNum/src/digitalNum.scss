@@ -1,0 +1,14 @@
+.digital-num {
+  display: inline-flex;
+
+  &-item {
+    display: inline-block;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+}
+
+.dn-slide-y-enter,
+.dn-slide-y-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
