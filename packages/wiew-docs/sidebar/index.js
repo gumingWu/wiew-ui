@@ -30,15 +30,15 @@ export default {
       text: "功能组件",
       children: [
         {
-          text: "二维码",
+          text: "QrCode 二维码",
           link: "/components/qrcode/",
         },
         {
-          text: "定制右键",
+          text: "RightClick 定制右键",
           link: "/components/rightClick/",
         },
         {
-          text: "动效数字",
+          text: "DigitalNum 动效数字",
           link: "/components/digitalNum/",
         },
       ],
