@@ -1,4 +1,4 @@
-import { defineComponent, ref, reactive, TransitionGroup, watch } from 'vue'
+import { defineComponent, ref, TransitionGroup, watch } from 'vue'
 import DigitalScroll from './digitalScroll'
 import props from './props'
 import type { DigitalTransformPropType } from './types'
