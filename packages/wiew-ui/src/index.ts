@@ -6,6 +6,7 @@ import Input from "./input";
 import PhotoView from "./phtotView";
 import QRcode from "./qrcode";
 import RightClick from "./rightClick";
+import ShrinkBox from "./shrinkBox";
 import VirtualScroll from "./virtualScroll";
 
 const installModule = [
@@ -16,6 +17,7 @@ const installModule = [
   PhotoView,
   QRcode,
   RightClick,
+  ShrinkBox,
   VirtualScroll,
 ];
 

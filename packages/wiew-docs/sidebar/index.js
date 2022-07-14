@@ -58,6 +58,10 @@ export default {
           text: "VirtualScroll 虚拟滚动",
           link: "/components/virtualScroll/",
         },
+        {
+          text: "ShrinkBox 伸缩盒子",
+          link: "components/shrinkBox/"
+        }
       ],
     },
   ],
