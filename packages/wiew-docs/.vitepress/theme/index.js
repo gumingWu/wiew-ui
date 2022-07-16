@@ -1,4 +1,4 @@
-import Theme from "vitepress/dist/client/theme-default";
+import Theme from 'vitepress/theme'
 import { registerComponents } from "./register-components";
 import "vitepress-theme-demoblock/theme/styles/index.css";
 

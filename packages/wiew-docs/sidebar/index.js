@@ -2,7 +2,7 @@ export default {
   "/": [
     {
       text: "开发指南",
-      children: [
+      items: [
         {
           text: "基本介绍",
           link: "/components/introduction/main",
@@ -15,7 +15,7 @@ export default {
     },
     {
       text: "基础组件",
-      children: [
+      items: [
         {
           text: "Button 按钮",
           link: "/components/button/",
@@ -28,7 +28,7 @@ export default {
     },
     {
       text: "功能组件",
-      children: [
+      items: [
         {
           text: "QrCode 二维码",
           link: "/components/qrcode/",
@@ -45,7 +45,7 @@ export default {
     },
     {
       text: "进阶组件",
-      children: [
+      items: [
         {
           text: "DatePicker 日期选择器",
           link: "/components/datePicker/",

@@ -12,7 +12,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: justify;
-  /* display: flex; */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -42,7 +41,6 @@
   border-radius: 4px;
   color:  #fff;
   cursor: pointer;
-  /* margin-top: -30px; */
 }
 .btn::before{
   content:'展开'
