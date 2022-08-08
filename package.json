@@ -3,15 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "docs:dev": "pnpm docs:dev --filter @wiew/docs",
-    "example": "pnpm serve --filter @wiew/example",
-    "build:cli": "pnpm build --filter @wiew/cli"
   },
   "workspaces": [
     "packages/*"
   ],
   "dependencies": {
-    "@wiew/cli": "workspace:^1.0.0",
-    "lodash-es": "^4.17.21"
   }
 }
