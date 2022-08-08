@@ -2,6 +2,7 @@ import type { App } from "vue";
 import Button from "./button";
 import DatePicker from "./datePicker";
 import DigitalNum from "./digitalNum";
+import { Fullscreen } from "./fullscreen";
 import Input from "./input";
 import PhotoView from "./phtotView";
 import QRcode from "./qrcode";
@@ -20,6 +21,10 @@ const installModule = [
   ShrinkBox,
   VirtualScroll,
 ];
+
+export {
+  Fullscreen
+}
 
 export default {
   install(app: App) {

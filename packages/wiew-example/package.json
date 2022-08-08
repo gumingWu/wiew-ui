@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
-    "@wiew/ui": "workspace:^1.0.0",
+    "wiew-ui": "workspace:^1.0.0",
     "vue": "^3.2.33"
   },
   "devDependencies": {

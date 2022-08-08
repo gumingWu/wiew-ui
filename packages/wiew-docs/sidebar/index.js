@@ -34,6 +34,10 @@ export default {
           link: "/components/qrcode/",
         },
         {
+          text: "Fullscreen 全屏",
+          link: "/components/fullscreen/",
+        },
+        {
           text: "RightClick 定制右键",
           link: "/components/rightClick/",
         },
