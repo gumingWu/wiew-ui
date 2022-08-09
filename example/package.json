@@ -7,5 +7,8 @@
     "dev": "vite"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "wiew-ui": "workspace:^1.0.0"
+  }
 }

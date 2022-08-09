@@ -2,7 +2,14 @@
   "name": "wiew-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/wiew-ui.js",
+  "module": "dist/wiew-ui.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/wiew-ui.js",
+      "import": "./dist/wiew-ui.mjs"
+    }
+  },
   "scripts": {
     "build": "vite build"
   },
@@ -10,5 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "@wiew-ui/components": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^2.0.0"
   }
 }

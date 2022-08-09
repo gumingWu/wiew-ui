@@ -4,7 +4,7 @@ import { prefix } from '@wiew-ui/utils';
 export default defineComponent({
   name: `${prefix}Input`,
   setup() {
-    return (
+    return () => (
       <div class="wrapper">
         <input type="text" placeholder="我是input" />
       </div>

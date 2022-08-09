@@ -6,4 +6,6 @@ const msg = ref('hhasdasdash')
 
 <template>
   {{ msg }}
+  <WButton>slots咯</WButton>
+  <WInput></WInput>
 </template>

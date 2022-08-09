@@ -3,10 +3,12 @@ import { prefix } from '@wiew-ui/utils';
 
 export default defineComponent({
   name: `${prefix}Button`,
-  setup() {
-    return (
+  setup(props, { slots }) {
+    return () => (
       <div class="wrapper">
-        <button>哈哈哈</button>
+        <button>
+          { slots.default?.() }
+        </button>
       </div>
     )
   }
