@@ -1,0 +1,11 @@
+{
+  "name": "@wiew-ui/example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC"
+}

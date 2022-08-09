@@ -2,10 +2,19 @@
   "private": true,
   "packageManager": "pnpm@6.32.0",
   "scripts": {
+    "build:ui": "pnpm build --filter wiew-ui",
+    "example": "pnpm dev --filter @wiew-ui/example"
   },
   "workspaces": [
     "packages/*"
   ],
   "dependencies": {
+    "vue": "^3.2.37",
+    "vue-tsc": "^0.39.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.4"
   }
 }
