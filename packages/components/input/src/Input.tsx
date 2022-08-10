@@ -6,7 +6,7 @@ export default defineComponent({
   setup() {
     return () => (
       <div class="wrapper">
-        <input type="text" placeholder="我是input" />
+        <input type="text" placeholder="我是input111" />
       </div>
     )
   }

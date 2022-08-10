@@ -1,12 +1,26 @@
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 import { prefix } from '@wiew-ui/utils';
+import { ButtonProps } from './props';
+import type { ButtonPropsType } from './types'
+import './Button.less'
 
 export default defineComponent({
   name: `${prefix}Button`,
-  setup(props, { slots }) {
+  props: ButtonProps,
+  setup(props: ButtonPropsType, { slots }) {
+    const classes = computed(() => {
+      const { size, status, type } = props
+      return [
+        'button-preset',
+        `size-${size}`,
+        `type-${type}`,
+        `status-${status}`
+      ]
+    })
+
     return () => (
-      <div class="wrapper">
-        <button>
+      <div class="w-button-wrapper">
+        <button class={classes.value}>
           { slots.default?.() }
         </button>
       </div>
