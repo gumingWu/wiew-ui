@@ -1,0 +1,14 @@
+{
+  "name": "@wiew-ui/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vitepress": "^1.0.0-alpha.4"
+  }
+}

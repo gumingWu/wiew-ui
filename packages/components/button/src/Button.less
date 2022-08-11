@@ -25,56 +25,68 @@
   }
 
   .type-default {
-    background-color: rgb(22, 93, 255);
-    // border: 1px solid rgb(24, 93, 255);
-    color: #fff;
-    &:hover {
-      background-color: rgb(64, 128, 255);
-    }
-  }
-  .type-primary {
-    background-color: rgb(22, 93, 255);
-    // border: 1px solid rgb(24, 93, 255);
-    color: #fff;
-    &:hover {
-      background-color: rgb(64, 128, 255);
-    }
-  }
-  .type-dashed {
     background-color: rgb(242, 243, 245);
-    // border: 1px solid transparent;
     color: rgb(78, 89, 105);
     &:hover {
       background-color: rgb(229, 230, 235);
     }
+    &:active {
+      background-color: rgb(201, 205, 212);
+    }
+  }
+  .type-primary {
+    background-color: rgb(22, 93, 255);
+    color: #fff;
+    &:hover {
+      background-color: rgb(64, 128, 255);
+    }
+    &:active {
+      background-color: rgb(14, 66, 210);
+    }
+  }
+  .type-dashed {
+    background-color: rgb(242, 243, 245);
+    color: rgb(78, 89, 105);
+    &:hover {
+      background-color: rgb(229, 230, 235);
+    }
+    &:active {
+      background-color: rgb(201, 205, 212);
+    }
   }
   .type-text {
     background-color: transparent;
-    // border: 1px solid rgb(24, 93, 255);
     color: rgb(22, 93, 255);
   }
   .type-outline {
     background-color: transparent;
-    // border: 1px solid rgb(24, 93, 255);
     color: rgb(22, 93, 255);
   }
 
-  .status-success {
-    background-color: rgb(0, 180, 42);
-    &:hover {
-      background-color: rgb(35, 195, 67);
+  .status {
+    &-success {
+      color: #fff;
+      background-color: rgb(0, 180, 42);
+      &:hover {
+        background-color: rgb(35, 195, 67);
+      }
     }
-  }
-  .status-warning {
-    background-color: rgb(255, 125, 0);
-    &:hover {
-      background-color: rgb(255, 154, 46);
+    &-warning {
+      color: #fff;
+      background-color: rgb(255, 125, 0);
+      &:hover {
+        background-color: rgb(255, 154, 46);
+      }
+      &:active {
+        background-color: rgb(210, 95, 0);
+      }
     }
-  }
-  .status-danger {
-    background-color: rgb(245, 63, 63);
-    &:hover {
-      background-color: rgb(247, 101, 96);
+    &-danger {
+      color: #fff;
+      background-color: rgb(245, 63, 63);
+      &:hover {
+        background-color: rgb(247, 101, 96);
+      }
     }
   }
 }
