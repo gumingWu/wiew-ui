@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
+import { components } from '../metadata.json'
 
-const guideSidebar = () => [
+const guideSidebar = [
   {
     text: '基础',
     items: [
@@ -14,6 +15,9 @@ const guideSidebar = () => [
     ]
   }
 ]
+let componentNav
+const componentsSidebar = componentNav = components
+
 
 export default defineConfig({
   themeConfig: {
@@ -22,8 +26,13 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/gumingWu/wiew-ui' }
     ],
+    nav: [
+      { text: '指南', items: guideSidebar },
+      { text: '组件', items: componentNav }
+    ],
     sidebar: {
-      '/guide/': guideSidebar(),
+      '/guide/': guideSidebar,
+      '/components/': componentsSidebar,
     }
   }
 })
