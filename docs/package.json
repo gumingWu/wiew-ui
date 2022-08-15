@@ -5,16 +5,19 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vitepress dev",
-    "meta": "tsx scripts/buildMeta.ts"
+    "meta": "tsx scripts/buildMeta.ts",
+    "register:components": "vitepress-rc --docsDir ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vitepress": "^1.0.0-alpha.4"
+    "vitepress": "^1.0.0-alpha.4",
+    "wiew-ui": "workspace:^1.0.0"
   },
   "devDependencies": {
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "vitepress-theme-demoblock": "^1.4.2"
   }
 }

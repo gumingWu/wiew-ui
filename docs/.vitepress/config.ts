@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { demoBlockPlugin } from 'vitepress-theme-demoblock'
 import { components } from '../metadata.json'
 
 const guideSidebar = [
@@ -34,5 +35,10 @@ export default defineConfig({
       '/guide/': guideSidebar,
       '/components/': componentsSidebar,
     }
+  },
+  markdown: {
+    config(md) {
+      md.use(demoBlockPlugin)
+    },
   }
 })

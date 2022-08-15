@@ -5,4 +5,10 @@ sidebar: Button 按钮
 
 # Button 按钮
 
-button
+:::demo
+```vue
+<template>
+  <w-button type="primary">按钮</w-button>
+</template>
+```
+:::
