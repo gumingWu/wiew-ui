@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vitepress dev"
+    "docs:dev": "vitepress dev",
+    "meta": "tsx scripts/buildMeta.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "vitepress": "^1.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "fast-glob": "^3.2.11",
+    "fs-extra": "^10.1.0",
+    "gray-matter": "^4.0.3"
   }
 }
