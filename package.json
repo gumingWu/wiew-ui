@@ -4,7 +4,8 @@
   "scripts": {
     "dev:ui": "pnpm dev --filter wiew-ui",
     "build:ui": "pnpm build --filter wiew-ui",
-    "example": "pnpm dev --filter @wiew-ui/example"
+    "example": "pnpm dev --filter @wiew-ui/example",
+    "dev:docs": "pnpm docs:dev --filter @wiew-ui/docs"
   },
   "workspaces": [
     "packages/*"

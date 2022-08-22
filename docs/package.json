@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vitepress dev",
+    "docs:dev": "pnpm meta && vitepress dev",
     "meta": "tsx scripts/buildMeta.ts",
     "register:components": "vitepress-rc --docsDir ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vitepress": "^1.0.0-alpha.4",
+    "vitepress": "^1.0.0-alpha.8",
     "wiew-ui": "workspace:^1.0.0"
   },
   "devDependencies": {
