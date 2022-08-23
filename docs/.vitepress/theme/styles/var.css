@@ -3,4 +3,12 @@
   --vp-home-hero-name-background: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
   --vp-home-hero-image-background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
   --vp-home-hero-image-filter: blur(100px);
+
+  --vp-code-block-bg: rgba(125,125,125,0.04);
+  --vp-code-block-color: #000;
+}
+
+.dark {
+  --vp-code-block-bg: #1a1a1a;
+  --vp-code-block-color: rgba(255, 255, 255, 0.87);
 }

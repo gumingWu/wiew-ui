@@ -4,6 +4,7 @@ import { registerComponents } from './register-components'
 import WiewUI from 'wiew-ui'
 import 'wiew-ui/dist/style.css'
 import './styles/var.css'
+import './styles/demoBlock.css'
 
 export default {
   ...Theme,

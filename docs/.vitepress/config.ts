@@ -40,5 +40,9 @@ export default defineConfig({
     config(md) {
       md.use(demoBlockPlugin)
     },
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
+    },
   }
 })
