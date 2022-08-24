@@ -6,7 +6,7 @@ import { resolve, join } from 'path'
 const DIR = resolve(__dirname, '..')
 const COMP_PACKAGE = resolve(__dirname, '../components')
 export const META_DIR = join(DIR, 'metadata.json')
-const CATEGORY = ['Normal', 'Input', 'Experiment']
+const CATEGORY = ['Normal', 'Input', 'Show', 'Experiment']
 const TEMPLATE = {
   components: CATEGORY.map(cate => ({
     text: cate,
