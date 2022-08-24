@@ -1,5 +1,5 @@
 ---
-category: Input
+category: Normal
 sidebar: Input 输入框
 ---
 

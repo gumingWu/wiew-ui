@@ -6,10 +6,14 @@ import { resolve, join } from 'path'
 const DIR = resolve(__dirname, '..')
 const COMP_PACKAGE = resolve(__dirname, '../components')
 export const META_DIR = join(DIR, 'metadata.json')
-const CATEGORY = ['Normal', 'Input', 'Show', 'Experiment']
+const CATEGORY = [
+  { id: 'Normal', label: '基础组件' },
+  { id: 'Show', label: '数据展示组件' },
+  { id: 'Experiment', label: '实验性组件' },
+]
 const TEMPLATE = {
   components: CATEGORY.map(cate => ({
-    text: cate,
+    text: cate.id,
     items: []
   }))
 }
@@ -34,6 +38,11 @@ async function readComponentsFile() {
       })
     }
   }))
+
+  // 类型替换成中文
+  TEMPLATE.components.forEach(component => {
+    component.text = CATEGORY.find(item => item.id === component.text).label
+  })
 
   await fs.writeJSONSync(META_DIR, TEMPLATE, { spaces: 2 })
 }
