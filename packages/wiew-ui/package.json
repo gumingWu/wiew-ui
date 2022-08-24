@@ -2,10 +2,20 @@
   "name": "wiew-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/wiew-ui.js",
+  "module": "dist/wiew-ui.mjs",
+  "style": "dist/style.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite build --watch",
+    "build": "vite build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@wiew-ui/components": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "vite-plugin-dts": "^1.4.1"
+  }
 }

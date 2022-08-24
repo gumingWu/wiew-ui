@@ -13,3 +13,4 @@ yarn-error.log
 .vscode
 .idea
 lerna-debug.log
+metadata.json

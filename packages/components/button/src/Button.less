@@ -1,0 +1,92 @@
+.w-button-wrapper {
+  .button-preset {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+    box-sizing: border-box;
+    appearance: none;
+    user-select: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 400;
+    transition: all .1s linear;
+  }
+  .size-small {
+    padding: 0 14px;
+    height: 28px;
+  }
+  .size-middle {
+    padding: 0 18px;
+    height: 32px;
+  }
+  .size-large {
+    padding: 0 22px;
+    height: 36px;
+  }
+
+  .type-default {
+    background-color: rgb(242, 243, 245);
+    color: rgb(78, 89, 105);
+    &:hover {
+      background-color: rgb(229, 230, 235);
+    }
+    &:active {
+      background-color: rgb(201, 205, 212);
+    }
+  }
+  .type-primary {
+    background-color: rgb(22, 93, 255);
+    color: #fff;
+    &:hover {
+      background-color: rgb(64, 128, 255);
+    }
+    &:active {
+      background-color: rgb(14, 66, 210);
+    }
+  }
+  .type-dashed {
+    background-color: rgb(242, 243, 245);
+    color: rgb(78, 89, 105);
+    &:hover {
+      background-color: rgb(229, 230, 235);
+    }
+    &:active {
+      background-color: rgb(201, 205, 212);
+    }
+  }
+  .type-text {
+    background-color: transparent;
+    color: rgb(22, 93, 255);
+  }
+  .type-outline {
+    background-color: transparent;
+    color: rgb(22, 93, 255);
+  }
+
+  .status {
+    &-success {
+      color: #fff;
+      background-color: rgb(0, 180, 42);
+      &:hover {
+        background-color: rgb(35, 195, 67);
+      }
+    }
+    &-warning {
+      color: #fff;
+      background-color: rgb(255, 125, 0);
+      &:hover {
+        background-color: rgb(255, 154, 46);
+      }
+      &:active {
+        background-color: rgb(210, 95, 0);
+      }
+    }
+    &-danger {
+      color: #fff;
+      background-color: rgb(245, 63, 63);
+      &:hover {
+        background-color: rgb(247, 101, 96);
+      }
+    }
+  }
+}

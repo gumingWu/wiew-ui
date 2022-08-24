@@ -1,0 +1,23 @@
+{
+  "name": "@wiew-ui/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "pnpm meta && vitepress dev",
+    "meta": "tsx scripts/buildMeta.ts",
+    "register:components": "vitepress-rc --docsDir ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vitepress": "^1.0.0-alpha.8",
+    "wiew-ui": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "fast-glob": "^3.2.11",
+    "fs-extra": "^10.1.0",
+    "gray-matter": "^4.0.3",
+    "vitepress-theme-demoblock": "^1.4.2"
+  }
+}
