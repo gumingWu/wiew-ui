@@ -3,9 +3,11 @@
   "packageManager": "pnpm@6.32.0",
   "scripts": {
     "dev:ui": "pnpm dev --filter wiew-ui",
+    "dev:docs": "pnpm docs:dev --filter @wiew-ui/docs",
+    "build": "pnpm build:ui && pnpm build:docs",
     "build:ui": "pnpm build --filter wiew-ui",
-    "example": "pnpm dev --filter @wiew-ui/example",
-    "dev:docs": "pnpm docs:dev --filter @wiew-ui/docs"
+    "build:docs": "pnpm docs:build --filter @wiew-ui/docs",
+    "example": "pnpm dev --filter @wiew-ui/example"
   },
   "workspaces": [
     "packages/*"
