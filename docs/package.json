@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "pnpm meta && vitepress dev",
+    "docs:build": "pnpm meta && vitepress build",
     "meta": "tsx scripts/buildMeta.ts",
     "register:components": "vitepress-rc --docsDir ."
   },
