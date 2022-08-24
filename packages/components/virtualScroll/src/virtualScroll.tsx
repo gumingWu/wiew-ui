@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue'
 
-export default defineComponent({
+export default /*#__PURE__*/ defineComponent({
   name: 'WVirtualScroll',
   setup() {
     return () => (

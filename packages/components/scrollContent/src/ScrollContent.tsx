@@ -1,11 +1,16 @@
 import { defineComponent } from 'vue'
+import './ScrollContent.less'
 
-export default defineComponent({
+export default /*#__PURE__*/ defineComponent({
   name: 'WScrollContent',
-  setup() {
+  setup(props, { slots }) {
     return () => (
-      <div>
-        我是ScrollContent
+      <div class="scroll-content-box">
+        <div class="scroll-wrap">
+          <div class="scroll-item">
+            { slots.default?.() }
+          </div>
+        </div>
       </div>
     )
   }

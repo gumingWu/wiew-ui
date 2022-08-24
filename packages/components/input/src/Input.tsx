@@ -1,7 +1,7 @@
 import { defineComponent } from 'vue';
 import { prefix } from '@wiew-ui/utils';
 
-export default defineComponent({
+export default /*#__PURE__*/ defineComponent({
   name: `${prefix}Input`,
   setup() {
     return () => (

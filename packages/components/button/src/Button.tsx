@@ -4,7 +4,7 @@ import { ButtonProps } from './props';
 import type { ButtonPropsType } from './types'
 import './Button.less'
 
-export default defineComponent({
+export default /*#__PURE__*/ defineComponent({
   name: `${prefix}Button`,
   props: ButtonProps,
   setup(props: ButtonPropsType, { slots }) {
