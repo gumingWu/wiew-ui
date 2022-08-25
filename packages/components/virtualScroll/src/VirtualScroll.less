@@ -1,28 +1,23 @@
-.virtual-scroll-container {
-  height: 500px;
+.virtual-scroller {
+  border: 1px solid;
+  margin-top: 10px;
+  height: 600px;
   overflow: auto;
-  position: relative;
 
-  .virtual-scroll-plantom {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: -1;
+  .virtual-height {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
   }
 
-  .virtual-list {
-    left: 0;
-    right: 0;
-    top: 0;
-    position: absolute;
-    text-align: center;
+  .real-list-content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-    .virtual-list-item {
-      padding: 10px;
-      color: #333;
-      box-sizing: border-box;
-      border-bottom: 1px solid #999;
-    }
+  .real-list-item {
+    outline: 1px solid #000;
   }
 }

@@ -1,4 +1,4 @@
-import { defineComponent, ref, computed, onMounted } from 'vue'
+import { defineComponent, ref, computed, onMounted, toRefs } from 'vue'
 import { VirtualScrollProps as props } from './props'
 import type { VirtualScrollPropsType } from './types'
 import './VirtualScroll.less' 
@@ -7,50 +7,36 @@ export default /*#__PURE__*/ defineComponent({
   name: 'WVirtualScroll',
   props,
   setup(props: VirtualScrollPropsType) {
-    const screenHeight = ref(0)
-    const startOffset = ref(0)
-    const start = ref(0)
-    const end = ref(0)
-    const listRef = ref<HTMLElement | null>(null)
+    const { data, listItemHeight, containerHeight } = props
+    const start = ref(props.startIndex)
+    const end = ref(props.endIndex)
+    const translateY = ref(0)
 
-    const { listData, itemSize } = props
-
-    const listHeight = computed(() => {
-      return listData.length * itemSize
+    const visibleList = computed(() => {
+      return data.slice(start.value, end.value)
     })
-    const visibleCount = computed(() => {
-      return Math.ceil(screenHeight.value / itemSize)
-    })
-    const getTransform = computed(() => {
-      return `translateY(${startOffset}px)`
-    })
-    const visibleData = computed(() => {
-      return listData.slice(start.value, Math.min(end.value, listData.length))
+    
+    const virtualHeight = computed(() => {
+      return (data.length - visibleList.value.length) * listItemHeight + listItemHeight
     })
 
-    const scrollEvent = () => {
-      const scrollTop = listRef.value.scrollTop
-      start.value = Math.floor(scrollTop / itemSize)
-      end.value = start.value + visibleCount.value
-      startOffset.value = scrollTop - ( scrollTop % itemSize )
+    const onScroll = (e) => {
+      const eleScrollTop = e.target.scrollTop
+      translateY.value = eleScrollTop
+      start.value = Math.floor(eleScrollTop / listItemHeight)
+      end.value = start.value + 10
     }
 
-    onMounted(() => {
-      screenHeight.value = listRef.value.clientHeight
-      start.value = 0
-      end.value = start.value + visibleCount.value
-    })
-
     return () => (
-      <div ref={listRef} class="virtual-scroll-container" onScroll={scrollEvent}>
-        <div class="virtual-scroll-plantom" style={{ height: `${listHeight.value}px` }}></div>
-        <div class="virtual-list" style={{ transform: getTransform.value }}>
+      <div class="virtual-scroller" onScroll={onScroll} style={{ height: `${containerHeight}px` }}>
+        <div class="real-list-content" style={{ transform: `translateY(${translateY.value}px)` }}>
           {
-            visibleData.value.map(item => (
-              <div class="virtual-list-item" key={item.id} style={{ height: `${itemSize}px`, lineHeight: `${itemSize}px` }}>{item.value}</div>
+            visibleList.value.map(item => (
+              <div class="real-list-item" key={item.id} style={{ height: `${listItemHeight}px`, lineHeight: `${listItemHeight}px` }}>{item.name}</div>
             ))
           }
         </div>
+        <div class="virtual-height" style={{ height: `${virtualHeight.value}px` }}>数据加载完毕</div>
       </div>
     )
   }
