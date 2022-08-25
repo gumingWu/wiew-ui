@@ -1,0 +1,28 @@
+.virtual-scroll-container {
+  height: 500px;
+  overflow: auto;
+  position: relative;
+
+  .virtual-scroll-plantom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .virtual-list {
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    text-align: center;
+
+    .virtual-list-item {
+      padding: 10px;
+      color: #333;
+      box-sizing: border-box;
+      border-bottom: 1px solid #999;
+    }
+  }
+}

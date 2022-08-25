@@ -1,4 +1,4 @@
-import VirtualScroll from "./src/virtualScroll";
+import VirtualScroll from "./src/VirtualScroll";
 import { createInstall } from '@wiew-ui/utils';
 
 export const WVirtualScroll = createInstall(VirtualScroll)
