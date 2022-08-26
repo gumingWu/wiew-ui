@@ -3,8 +3,7 @@ import 'vitepress-theme-demoblock/theme/styles/index.css'
 import { registerComponents } from './register-components'
 import WiewUI from 'wiew-ui'
 import 'wiew-ui/dist/style.css'
-import './styles/var.css'
-import './styles/demoBlock.css'
+import './styles'
 
 export default {
   ...Theme,
