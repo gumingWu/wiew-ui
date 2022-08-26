@@ -19,6 +19,8 @@
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
     "vitepress-theme-demoblock": "^1.4.2"
   }
 }

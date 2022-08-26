@@ -11,6 +11,7 @@ export default /*#__PURE__*/ defineComponent({
     const classes = computed(() => {
       const { size, status, type } = props
       return [
+        'w-button-wrapper',
         'button-preset',
         `size-${size}`,
         `type-${type}`,
@@ -19,11 +20,9 @@ export default /*#__PURE__*/ defineComponent({
     })
 
     return () => (
-      <div class="w-button-wrapper">
-        <button class={classes.value}>
-          { slots.default?.() }
-        </button>
-      </div>
+      <button class={classes.value}>
+        { slots.default?.() }
+      </button>
     )
   }
 })

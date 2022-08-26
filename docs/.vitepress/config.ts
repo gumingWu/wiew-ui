@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { demoBlockPlugin } from 'vitepress-theme-demoblock'
+import { markdownClass } from '../plugins/markdown-class'
 import { components } from '../metadata.json'
 
 const guideSidebar = [
@@ -39,6 +40,7 @@ export default defineConfig({
   markdown: {
     config(md) {
       md.use(demoBlockPlugin)
+      md.use(markdownClass)
     },
     theme: {
       light: 'vitesse-light',

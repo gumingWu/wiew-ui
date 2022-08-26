@@ -5,6 +5,8 @@ sidebar: Modal 模态框
 
 # Modal 模态框
 
+利用`vue3`提供的组件`Teleport`，实现将`Modal`组件挂载到`body`标签下，避免样式问题导致的`Modal`错位
+
 :::demo
 ```vue
 <template>
@@ -25,9 +27,28 @@ const open = () => {
   show.value = true
 }
 const close = () => {
-  console.log(1);
   show.value = false
 }
 </script>
 ```
+:::
+
+## Modal属性
+
+:::class w-doc-table
+
+|属性|说明|类型|可选值|默认值|
+|----|----|-----|-----|--------|
+|show|是否显示Modal|boolean|——|false|
+
+:::
+
+## Modal事件
+
+:::class w-doc-table
+
+|事件名|说明|参数|
+|-----|----|---|
+|close|关闭Modal|——|
+
 :::
