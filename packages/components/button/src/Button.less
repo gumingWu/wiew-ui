@@ -1,5 +1,5 @@
 .w-button-wrapper {
-  .button-preset {
+  &.button-preset {
     border-radius: 4px;
     border: 1px solid transparent;
     outline: none;
@@ -11,20 +11,20 @@
     font-weight: 400;
     transition: all .1s linear;
   }
-  .size-small {
+  &.size-small {
     padding: 0 14px;
     height: 28px;
   }
-  .size-middle {
+  &.size-middle {
     padding: 0 18px;
     height: 32px;
   }
-  .size-large {
+  &.size-large {
     padding: 0 22px;
     height: 36px;
   }
 
-  .type-default {
+  &.type-default {
     background-color: rgb(242, 243, 245);
     color: rgb(78, 89, 105);
     &:hover {
@@ -34,7 +34,7 @@
       background-color: rgb(201, 205, 212);
     }
   }
-  .type-primary {
+  &.type-primary {
     background-color: rgb(22, 93, 255);
     color: #fff;
     &:hover {
@@ -44,7 +44,7 @@
       background-color: rgb(14, 66, 210);
     }
   }
-  .type-dashed {
+  &.type-dashed {
     background-color: rgb(242, 243, 245);
     color: rgb(78, 89, 105);
     &:hover {
@@ -54,16 +54,16 @@
       background-color: rgb(201, 205, 212);
     }
   }
-  .type-text {
+  &.type-text {
     background-color: transparent;
     color: rgb(22, 93, 255);
   }
-  .type-outline {
+  &.type-outline {
     background-color: transparent;
     color: rgb(22, 93, 255);
   }
 
-  .status {
+  &.status {
     &-success {
       color: #fff;
       background-color: rgb(0, 180, 42);
