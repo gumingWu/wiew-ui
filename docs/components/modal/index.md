@@ -35,12 +35,20 @@ const close = () => {
 
 ## Modal属性
 
+:::class w-doc-table
+
 |属性|说明|类型|可选值|默认值|
 |----|----|-----|-----|--------|
 |show|是否显示Modal|boolean|——|false|
 
+:::
+
 ## Modal事件
+
+:::class w-doc-table
 
 |事件名|说明|参数|
 |-----|----|---|
 |close|关闭Modal|——|
+
+:::
