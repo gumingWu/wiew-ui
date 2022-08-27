@@ -1,3 +1,5 @@
 import './var.css'
 import './demoBlock.css'
 import './markdownClass.less'
+import 'vitepress-theme-demoblock/theme/styles/index.css'
+import 'wiew-ui/dist/style.css'
