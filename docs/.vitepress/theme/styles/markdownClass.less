@@ -1,0 +1,35 @@
+.w-doc-table {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin-bottom: 45px;
+  & > table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5em;
+
+    tr {
+      td:nth-child(2) {
+        font-family: var(--font-family);
+      }
+    }
+
+    thead tr:first-child th {
+      border-top: none;
+    }
+  }
+}
+
+
+.vp-doc .w-doc-table th,
+.vp-doc .w-doc-table td {
+  border: none;
+  white-space: nowrap;
+  border-top: 1px solid var(--md-class-table-border-color);
+  border-bottom: 1px solid var(--md-class-table-border-color);
+  padding: 0.6em 1em;
+  text-align: left;
+  max-width: 250px;
+  white-space: pre-wrap;
+}
