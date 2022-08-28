@@ -1,3 +1,12 @@
+:root {
+  --w-modal-bg-color: #fff;
+  --w-modal-font-color: #000;
+}
+.dark {
+  --w-modal-bg-color: #242424;
+  --w-modal-font-color: #fff;
+}
+
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -17,10 +26,11 @@
       width: 300px;
       margin: 0px auto;
       padding: 20px 30px;
-      background-color: #fff;
+      background-color: var(--w-modal-bg-color);
       border-radius: 2px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
       transition: all 0.3s ease;
+      color: var(--w-modal-font-color);
     }
   }
 }
