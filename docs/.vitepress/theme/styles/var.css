@@ -15,6 +15,9 @@
 .dark {
   --vp-code-block-bg: #1a1a1a;
   --vp-code-block-color: rgba(255, 255, 255, 0.87);
+
+  --vp-c-brand: #00aaef;
+  --vp-c-brand-dark: #00ddef;
 }
 
 /* table相关 */
