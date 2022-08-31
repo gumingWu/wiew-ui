@@ -1,0 +1,28 @@
+{
+  "name": "@wiew-ui/cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.cjs.ts",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/core": "^1.2.245",
+    "cac": "^6.7.14",
+    "prompts": "^2.4.2",
+    "tsup": "^6.2.3"
+  }
+}
