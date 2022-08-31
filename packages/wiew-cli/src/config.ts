@@ -1,5 +1,7 @@
 import { parse } from 'path'
-const JoyCon = require('joycon')
+import JoyCon from 'joycon'
+
+const { bundleRequire } = require('bundle-require')
 
 export const DEFAULT_CONFIG_FILE = [
   'wiew.config.js',
@@ -16,6 +18,12 @@ export async function loadWiewConfig(cwd: string) {
   })
 
   console.log(configPath);
+  if(configPath) {
+    const config = await bundleRequire({
+      filepath: configPath,
+    })
+    console.log(config);
+  }
 }
 
 // 占个坑，暂时做不出类型检查

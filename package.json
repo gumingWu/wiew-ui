@@ -7,7 +7,8 @@
     "build": "pnpm build:ui && pnpm build:docs",
     "build:ui": "pnpm build --filter wiew-ui",
     "build:docs": "pnpm docs:build --filter @wiew-ui/docs",
-    "example": "pnpm dev --filter @wiew-ui/example"
+    "example": "pnpm dev --filter @wiew-ui/example",
+    "cli": "wiew-cli"
   },
   "workspaces": [
     "packages/*"
