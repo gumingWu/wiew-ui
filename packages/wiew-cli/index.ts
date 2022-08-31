@@ -1,3 +1,1 @@
-#!/usr/bin/env node
-
-export * from './src/config'
+export { defineConfig } from './src/config'

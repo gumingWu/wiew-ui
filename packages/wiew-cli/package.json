@@ -2,6 +2,9 @@
   "name": "@wiew-ui/cli",
   "version": "1.0.0",
   "description": "",
+  "bin": {
+    "wiew-cli": "dist/cli.js"
+  },
   "main": "dist/index.cjs.ts",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -22,6 +25,7 @@
   "devDependencies": {
     "@swc/core": "^1.2.245",
     "cac": "^6.7.14",
+    "joycon": "^3.1.1",
     "prompts": "^2.4.2",
     "tsup": "^6.2.3"
   }
