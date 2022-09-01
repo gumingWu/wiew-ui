@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "bin": {
-    "wiew-cli": "dist/cli.cjs.js"
+    "wiew-cli": "dist/cli.js"
   },
   "main": "dist/index.cjs.ts",
   "module": "dist/index.esm.js",
@@ -16,19 +16,21 @@
     }
   },
   "scripts": {
+    "removeDist": "tsx scripts/removeDist.ts",
     "dev": "tsup --watch",
-    "build": "tsup"
+    "build": "pnpm removeDist && tsup"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@swc/core": "^1.2.245",
-    "bundle-require": "^3.1.0",
     "cac": "^6.7.14",
-    "esbuild": "^0.15.6",
+    "fs-extra": "^10.1.0",
+    "jiti": "^1.14.0",
     "joycon": "^3.1.1",
     "prompts": "^2.4.2",
-    "tsup": "^6.2.3"
+    "tsup": "^6.2.3",
+    "tsx": "^3.9.0"
   }
 }
