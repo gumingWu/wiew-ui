@@ -1,6 +1,6 @@
 import cac from 'cac'
 import { loadWiewConfig } from './config'
-import { componentsAction } from './actions'
+import { rootAction, componentsAction } from './actions'
 
 const cli = cac('wiew-cli')
 
@@ -13,6 +13,11 @@ export function getCleanCliOptions(options) {
 
 export function run() {
   // loadWiewConfig(process.cwd())
+  cli.command('[root]', 'choose methods', {
+    ignoreOptionDefaultValue: true,
+  })
+    .action(rootAction)
+
   cli.command('component', 'create a component')
     .option('-n, --name <name>', '[string] component name')
     .action(options => {
