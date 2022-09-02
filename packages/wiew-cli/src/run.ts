@@ -1,6 +1,6 @@
 import cac from 'cac'
 import { loadWiewConfig } from './config'
-import { rootAction, componentsAction } from './actions'
+import { rootAction, componentsAction, projectAction } from './actions'
 
 const cli = cac('wiew-cli')
 
@@ -23,6 +23,14 @@ export function run() {
     .action(options => {
       const cleanCliOptions = getCleanCliOptions(options)
       componentsAction(cleanCliOptions)
+    })
+  
+  cli.command('project', 'create a project using wiew-ui')
+    .option('-n, --name <name>', '[string] project name')
+    .action(options => {
+      const cleanCliOptions = getCleanCliOptions(options)
+
+      projectAction(cleanCliOptions)
     })
     
   cli.help()
