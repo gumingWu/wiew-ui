@@ -12,7 +12,6 @@ export function getCleanCliOptions(options) {
 }
 
 export function run() {
-  // loadWiewConfig(process.cwd())
   cli.command('[root]', 'choose methods', {
     ignoreOptionDefaultValue: true,
   })
@@ -20,9 +19,10 @@ export function run() {
 
   cli.command('component', 'create a component')
     .option('-n, --name <name>', '[string] component name')
-    .action(options => {
+    .action(async options => {
       const cleanCliOptions = getCleanCliOptions(options)
-      componentsAction(cleanCliOptions)
+      const userConfig = await loadWiewConfig(process.cwd())
+      componentsAction(cleanCliOptions, userConfig)
     })
   
   cli.command('project', 'create a project using wiew-ui')
