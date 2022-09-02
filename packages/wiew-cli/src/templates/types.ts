@@ -1,3 +1,5 @@
-const template = ``
+const template = `5`
 
-export function createTypesTemplate() {}
+export function createTypesTemplate(options) {
+  return template
+}

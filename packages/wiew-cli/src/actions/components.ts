@@ -1,8 +1,10 @@
-import { lowerFirst, bigCamelCase, compose } from '@wiew-ui/utils'
 import prompts from 'prompts'
 import { join } from 'path'
 import consola from 'consola'
-import { blue } from 'kolorist'
+import { blue, red } from 'kolorist'
+import { mkdirs, writeFile, pathExistsSync } from 'fs-extra'
+import { lowerFirst, upperFirst, bigCamelCase, compose } from '@wiew-ui/utils'
+import { createComponentTemplate, createComponentIndexTemplate, createCssTemplate, createPropsTemplate, createTypesTemplate } from '../templates'
 
 export async function componentsAction(options, userConfig) {
   let componentName = compose(lowerFirst, bigCamelCase)(options.name || '')
@@ -42,4 +44,42 @@ export async function componentsAction(options, userConfig) {
   consola.success(result)
   componentName = result.componentName ?? componentName
   const { componentPath, docPath } = result
+
+  if(pathExistsSync(componentPath)) {
+    consola.error(red(`${componentName}组件已存在，换个名呗`))
+    return
+  }
+
+  createComponentFile({
+    componentName,
+    componentPath,
+    docPath
+  })
+}
+
+async function createComponentFile(options) {
+  const {
+    componentName,
+    componentPath,
+    docPath
+  } = options
+  const srcPath = join(componentPath, 'src')
+  const indexPath = join(componentPath, 'index.ts')
+  const contentPath = join(srcPath, `${upperFirst(componentName)}.tsx`)
+  const cssPath = join(srcPath, `${upperFirst(componentName)}.css`)
+  const propsPath = join(srcPath, 'props.ts')
+  const typesPath = join(srcPath, 'types.ts')
+
+  try {
+    await Promise.all([mkdirs(componentPath), mkdirs(srcPath)])
+    await Promise.all([
+      writeFile(indexPath, createComponentIndexTemplate()),
+      writeFile(contentPath, createComponentTemplate()),
+      writeFile(cssPath, createCssTemplate()),
+      writeFile(propsPath, createPropsTemplate()),
+      writeFile(typesPath, createTypesTemplate())
+    ])
+  } catch(e) {
+    consola.error(e)
+  }
 }

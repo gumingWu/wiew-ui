@@ -1,3 +1,5 @@
-const template = ``
+const template = `4`
 
-export function createPropsTemplate() {}
+export function createPropsTemplate(options) {
+  return template
+}

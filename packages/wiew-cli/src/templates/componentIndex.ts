@@ -1,3 +1,5 @@
-const template = ``
+const template = `2`
 
-export function createComponentIndexTemplate() {}
+export function createComponentIndexTemplate(options) {
+  return template
+}
