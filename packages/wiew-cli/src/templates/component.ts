@@ -11,7 +11,7 @@ export default defineComponent({
   props,
   setup(props: ${upperName}PropsType) {
     return () => (
-      <div class="w-${componentName}"></div>
+      <div class="w-${componentName}">我是W${upperName}</div>
     )
   }
 })
