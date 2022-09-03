@@ -1,8 +1,9 @@
 import prompts from 'prompts'
 import { join } from 'path'
 import consola from 'consola'
-import { blue, red } from 'kolorist'
+import { blue, red, bgBlue } from 'kolorist'
 import { mkdirs, writeFile, pathExistsSync } from 'fs-extra'
+import fg from 'fast-glob'
 import { lowerFirst, upperFirst, bigCamelCase, compose } from '@wiew-ui/utils'
 import { createComponentTemplate, createComponentIndexTemplate, createCssTemplate, createDocTemplate, createPropsTemplate, createTypesTemplate } from '../templates'
 
@@ -16,7 +17,7 @@ const COMPONENT_CATEGORY = [
 export async function componentsAction(options, userConfig) {
   let componentName = compose(lowerFirst, bigCamelCase)(options.name || '')
 
-  const { componentDir, docDir } = userConfig
+  const { componentDir, componentEntryDir, docDir } = userConfig
 
   let result
   try {
@@ -47,7 +48,7 @@ export async function componentsAction(options, userConfig) {
       {
         type: pre => pre === 'Other' ? 'text' : null,
         name: 'customizeCategory',
-        message: blue('输入自定义分类')
+        message: blue('输入自定义分类(自定义分类记得给docs/scripts/buildMeta添加分类)')
       },
       {
         type: 'text',
@@ -75,7 +76,7 @@ export async function componentsAction(options, userConfig) {
     return
   }
 
-  createComponentFile({
+  await createComponentFile({
     componentName,
     componentChinese,
     category, 
@@ -83,6 +84,17 @@ export async function componentsAction(options, userConfig) {
     componentPath,
     docPath
   })
+  const fgComponents = await fg('*', {
+    cwd: componentDir,
+    ignore: [
+      'node_modules'
+    ],
+    onlyDirectories: true
+  })
+  await rebuildComponentOutput(fgComponents, componentDir)
+  await rebuildComponentEntryFile(fgComponents, componentEntryDir)
+
+  consola.info(bgBlue('记得执行pnpm build:ui先编译组件库，再执行pnpm dev:docs才能看到效果'))
 }
 
 async function createComponentFile(options) {
@@ -112,6 +124,41 @@ async function createComponentFile(options) {
       writeFile(typesPath, createTypesTemplate({ componentName })),
       writeFile(mdPath, createDocTemplate({ componentName, componentChinese, category }))
     ])
+  } catch(e) {
+    consola.error(e)
+  }
+}
+
+async function rebuildComponentOutput(components, componentDir) {
+  const outputFilePath = join(componentDir, 'index.ts')
+  const componentsExport = components.map(cpn => `export * from "./${cpn}"\n`).join('')
+
+  try {
+    writeFile(outputFilePath, componentsExport)
+  } catch(e) {
+    consola.error(e)
+  }
+}
+
+async function rebuildComponentEntryFile(components, componentEntryDir) {
+  const componentEntryFilePath = join(componentEntryDir, 'components.ts')
+  const componentImportTemplate = components.map(cpn => `import { W${upperFirst(cpn)} } from "@wiew-ui/components"\n`).join('')
+  const componentImportArr = components.map(cpn => `\tW${upperFirst(cpn)},\n`).join('')
+
+  const componentEntryFileContent = `\
+import type { App } from 'vue'
+${componentImportTemplate}
+
+export const components = [
+${componentImportArr}
+]
+
+export function install(app: App) {
+  components.forEach(component => app.use(component))
+}
+`
+  try {
+    writeFile(componentEntryFilePath, componentEntryFileContent)
   } catch(e) {
     consola.error(e)
   }
