@@ -4,7 +4,7 @@ import consola from 'consola'
 import { blue, red } from 'kolorist'
 import { mkdirs, writeFile, pathExistsSync } from 'fs-extra'
 import { lowerFirst, upperFirst, bigCamelCase, compose } from '@wiew-ui/utils'
-import { createComponentTemplate, createComponentIndexTemplate, createCssTemplate, createPropsTemplate, createTypesTemplate } from '../templates'
+import { createComponentTemplate, createComponentIndexTemplate, createCssTemplate, createDocTemplate, createPropsTemplate, createTypesTemplate } from '../templates'
 
 export async function componentsAction(options, userConfig) {
   let componentName = compose(lowerFirst, bigCamelCase)(options.name || '')
@@ -69,15 +69,17 @@ async function createComponentFile(options) {
   const cssPath = join(srcPath, `${upperFirst(componentName)}.css`)
   const propsPath = join(srcPath, 'props.ts')
   const typesPath = join(srcPath, 'types.ts')
+  const mdPath = join(docPath, 'index.md')
 
   try {
-    await Promise.all([mkdirs(componentPath), mkdirs(srcPath)])
+    await Promise.all([mkdirs(componentPath), mkdirs(srcPath), mkdirs(docPath)])
     await Promise.all([
-      writeFile(indexPath, createComponentIndexTemplate()),
-      writeFile(contentPath, createComponentTemplate()),
-      writeFile(cssPath, createCssTemplate()),
-      writeFile(propsPath, createPropsTemplate()),
-      writeFile(typesPath, createTypesTemplate())
+      writeFile(indexPath, createComponentIndexTemplate({ componentName })),
+      writeFile(contentPath, createComponentTemplate({ componentName })),
+      writeFile(cssPath, createCssTemplate({ componentName })),
+      writeFile(propsPath, createPropsTemplate({ componentName })),
+      writeFile(typesPath, createTypesTemplate({ componentName })),
+      writeFile(mdPath, createDocTemplate({ componentName }))
     ])
   } catch(e) {
     consola.error(e)

@@ -1,5 +1,6 @@
 export * from './component'
 export * from './componentIndex'
 export * from './css'
+export * from './doc'
 export * from './props'
 export * from './types'

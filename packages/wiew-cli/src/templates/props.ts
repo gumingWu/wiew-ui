@@ -1,5 +1,13 @@
-const template = `4`
+import { upperFirst } from "@wiew-ui/utils"
+
+const template = ({ upperName }) => `\
+export const ${upperName}Props = {
+  
+}
+`
 
 export function createPropsTemplate(options) {
-  return template
+  const { componentName } = options
+  const upperName = upperFirst(componentName)
+  return template({ upperName })
 }
