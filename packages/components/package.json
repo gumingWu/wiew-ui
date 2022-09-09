@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@wiew-ui/utils": "workspace:^1.0.0"
+    "@wiew-ui/utils": "workspace:^1.0.0",
+    "better-scroll": "^2.4.2"
   }
 }
