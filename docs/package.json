@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vitepress": "^1.0.0-alpha.8",
+    "vitepress": "1.0.0-alpha.8",
     "wiew-ui": "workspace:^1.0.0"
   },
   "devDependencies": {
