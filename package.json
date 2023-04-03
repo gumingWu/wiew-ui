@@ -19,6 +19,7 @@
     "vue-tsc": "^0.39.5"
   },
   "devDependencies": {
+    "@types/node": "^18.15.11",
     "@vitejs/plugin-vue": "^3.0.1",
     "@wiew-ui/cli": "workspace:^1.0.0",
     "fast-glob": "^3.2.11",

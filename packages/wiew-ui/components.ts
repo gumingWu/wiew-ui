@@ -4,6 +4,7 @@ import { WEditor } from "@wiew-ui/components"
 import { WInput } from "@wiew-ui/components"
 import { WLoadBox } from "@wiew-ui/components"
 import { WModal } from "@wiew-ui/components"
+import { WRightMenu } from "@wiew-ui/components"
 import { WScrollContent } from "@wiew-ui/components"
 import { WTree } from "@wiew-ui/components"
 import { WVirtualScroll } from "@wiew-ui/components"
@@ -15,6 +16,7 @@ export const components = [
 	WInput,
 	WLoadBox,
 	WModal,
+	WRightMenu,
 	WScrollContent,
 	WTree,
 	WVirtualScroll,
